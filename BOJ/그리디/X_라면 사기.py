@@ -1,3 +1,16 @@
+# 아직 못 푼 문제
+
+# 실패 케이스
+# 1 2 1 1
+
+# X
+# 1 1 1
+#   1   1
+
+# O
+# 1 1
+#   1 1 1
+
 import sys
 input = sys.stdin.readline
 
