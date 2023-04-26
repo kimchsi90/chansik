@@ -1,23 +1,23 @@
+# 2차원 방향 벡터를 이용하여 움직임 조절
+
 n = int(input())
 data = list(input().split())
+arr = [[] * (n + 1) for _ in range(n + 1)]
 
-x, y = 0, 0
-# R, L, D, U
-dx = [0, 0, 1, -1]
-dy = [1, -1, 0, 0]
+# R L D U
+dx = [0, 0, 1, -1] # 열
+dy = [1, -1, 0, 0] # 행
+move_types = ["R", "L", "D", "U"]
 
-for vec in data:
-    if vec == "R" and y < n:
-        x += dx[0]
-        y += dy[0]
-    elif vec == "L" and y > 0:
-        x += dx[1]
-        y += dy[1]
-    elif vec == "D" and x < n:
-        x += dx[2]
-        y += dy[2]
-    elif vec == "U" and x > 0:
-        x += dx[3]
-        y += dy[3]
+x, y = 1, 1
 
-print(x + 1, y + 1)
+for dir in data:
+    for i in range(len(move_types)):
+        if dir == move_types[i]:
+            nx = x + dx[i]
+            ny = y + dy[i]
+
+    if n >= nx >= 1 and n >= ny >= 1:
+        x, y = nx, ny
+
+print(x, y)

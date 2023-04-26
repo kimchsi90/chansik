@@ -1,15 +1,19 @@
-user_input = input()
-string = []
-number = 0
+s_arr = list(input())
+result = []
+value = 0
 
-for data in user_input:
-    # if ord('A') <= ord(data) <= ord('Z'):
-    if data.isalpha():
-        string.append(data)
+for i in range(len(s_arr)):
+    # if s_arr[i].is_alpha():
+    if ord('A') <= ord(s_arr[i]) <= ord('Z'):
+        result.append(s_arr[i])
     else:
-        number += int(data)
+        value += int(s_arr[i])
 
-string.sort()
-for item in string:
-    print(item, end="")
-print(number)
+# 알파벳 오름차순 정렬
+result.sort()
+
+# 숫자가 하나라도 존재하면 append
+if value != 0:
+    result.append(str(value))
+    
+print("".join(result))
