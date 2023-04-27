@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+n, m = map(int, input().split()) # 1<=N,M<=1,000이므로 전체 얼음틀의 공간은 100만개가 됨
 
 graph = []
 
@@ -7,7 +7,7 @@ for i in range(n):
 
 
 def dfs(x, y):
-    if x <= -1 or x >= n or y <= -1 or y <= n:
+    if not (0 <= x < n and 0 <= y < m):
         return False
 
     if graph[x][y] == 0:
@@ -29,3 +29,13 @@ for i in range(n):
             result += 1
 
 print(result)
+
+'''
+4 5
+00110
+00011
+11111
+00000
+
+정답: 3
+'''
