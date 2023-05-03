@@ -8,7 +8,7 @@ def binary_search_left(arr, target, start, end):
     result = 0
     while start <= end:
         mid = (start + end) // 2
-        if arr[mid] >= target:
+        if target <= arr[mid]: # target 값을 찾았어도 더 작은 index를 가진 target 값을 찾기 위해(왼쪽 범위 탐색)
             end = mid - 1
             result = mid
         else:
@@ -19,7 +19,7 @@ def binary_search_right(arr, target, start, end):
     result = 0
     while start <= end:
         mid = (start + end) // 2
-        if arr[mid] <= target:
+        if arr[mid] <= target: # target 값을 찾았어도 더 큰 index를 가진 target 값을 찾기 위해(오른쪽 범위 탐색)
             start = mid + 1
             result = mid
         else:
