@@ -29,3 +29,11 @@ def quick_sort(array, start, end):
 
 quick_sort(array, 0, len(array) - 1)
 print(array)
+
+'''
+시간 복잡도: 평균적으로 O(NlogN)- N(가로: 원소의 개수) * logN(세로: 이상적으로 2분할씩 일어날 경우), 최악의 경우 O(N**2)- 이미 정렬된 경우 앞에서부터 계속 선형 탐색을 해야 하므로.
+엄밀히 말하면 pivot을 어떻게 선택하느냐에 따라서 분할이 절반에 가깝게 이루어지지 않고 한쪽에 편향적으로 일어날 경우에 최악의 경우가 일어남
+
+공간 복잡도: O(N)
+start, end, pivot, left, right 변수 이외에 array가 N의 길이만큼 공간을 차지하므로
+'''

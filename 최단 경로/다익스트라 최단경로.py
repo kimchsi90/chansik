@@ -31,10 +31,10 @@ def dijkstra(start):
         if distance[now] < dist:
             continue
         # 현재 노드와 연결된 다른 인접한 노드들을 확인
-        for i in graph[now]:
-            cost = dist + i[1]
+        for i in graph[now]: # i는 튜플로 (노드, 비용) now 노드와 인접한 노드와 비용을 반환
+            cost = dist + i[1] # i[1]은 비용
             # 현재 노드를 거쳐서, 다른 노드로 이동하는 거리가 더 짧은 경우
-            if cost < distance[i[0]]:
+            if cost < distance[i[0]]: # i[0]은 인접한 노드의 번호
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
     

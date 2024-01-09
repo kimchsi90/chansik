@@ -24,7 +24,7 @@ def dfs(x, y):
 result = 0
 for i in range(n):
     for j in range(m):
-        # 현재 위치를 방문하지 않았다면 True 반환하 현재 위치와 인접한 모든 노드를 방문 처리
+        # 현재 위치를 방문하지 않았다면 True를 반환하고 현재 위치와 인접한 모든 노드를 방문 처리
         if dfs(i, j) == True:
             result += 1
 

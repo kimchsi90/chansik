@@ -1,6 +1,7 @@
+# 투 포인터 알고리즘 사용
 n = 5 # 데이터의 개수 N
 m = 5 # 찾고자 하는 부분합 M
-data = [1, 2, 3, 4, 5] # 전체 수열
+data = [1, 2, 3, 2, 5] # 전체 수열
 
 count = 0
 interval_sum = 0
@@ -19,3 +20,7 @@ for start in range(n):
     interval_sum -= data[start]
 
 print(count)
+
+'''
+3
+'''
