@@ -17,3 +17,5 @@ def solution(string):
 
 my_string = "abcdefghijklmnopqrstuvwxyz"
 print(solution(my_string))
+
+# 시간 복잡도: O(N), 공간 복잡도: O(1)
